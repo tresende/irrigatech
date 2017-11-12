@@ -1,0 +1,18 @@
+{
+  "name": "appbluehack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "admin-lte": "^2.4.2",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "highcharts": "^6.0.2",
+    "jquery": "^3.2.1"
+  }
+}
