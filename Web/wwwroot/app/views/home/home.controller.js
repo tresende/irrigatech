@@ -104,11 +104,15 @@ app.controller('home', [
 
             for (var i = 0; i < nodes.length; i++) {
                 var item = nodes[i];
-                $('#' + item.node + '-air').parent().parent().addClass('pulse')
-
+                if (item.soilHumidity > 10) {
+                    $('#node1-air').parent().parent().addClass('pulse')
+                }
+                else {
+                    $('#node1-air').parent().parent().removeClass('pulse')
+                }
                 var charAir = Highcharts.chart(item.node + '-air', Highcharts.merge(gaugeOptions, {
                     title: {
-                        text: 'Humidade do Ar'
+                        text: 'Umidade do Ar'
                     },
                     credits: {
                         enabled: false
@@ -177,9 +181,22 @@ app.controller('home', [
                 var nodes = response.data;
                 for (var i = 0; i < nodes.length; i++) {
                     var item = nodes[i];
+                    if (item.soilHumidity > 10) {
+                        $('#node1-air').parent().parent().addClass('pulse')
+                    }
+                    else {
+                        $('#node1-air').parent().parent().removeClass('pulse')
+                    }
+
                     charts[i].charSoil.update({
                         series: [{
                             data: [item.soilHumidity],
+                        }]
+                    });
+
+                    charts[i].charAir.update({
+                        series: [{
+                            data: [item.soilAir],
                         }]
                     });
 

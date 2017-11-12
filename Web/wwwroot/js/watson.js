@@ -50,3 +50,7 @@ renderMessage = function (text, to) {
     $('ol').get(0).scrollTop = $('ol').get(0).scrollHeight;
     $('.textarea').val('');
 }
+
+$(document).ready(function () {
+    $('#myModal').modal('show');
+});
