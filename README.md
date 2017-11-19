@@ -4,7 +4,8 @@ Basic useful feature list:
 
  * IoT raspberry pi/ .net core rest api
  * IA/Watson Chatbot 
- * Mysql Db
+ * Mysql
+ * Angular Js
  * Challenges: Digital Agriculture
 
 
